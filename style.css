@@ -1,0 +1,186 @@
+/**
+ * Webfont link 
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700);
+
+/**
+ * Plugin base styles 
+ */
+
+.rift { 
+  width: 300px; /* Define width */
+  height: 200px; /* Define height */
+  position: relative; 
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rift img { 
+  width: 100%; 
+  height: auto; 
+  opacity: 0;
+}
+
+.rift .caption { 
+  position: absolute; 
+  top: 50%;
+  width: 100%;
+  height: 60px; /* Define caption height */
+  line-height: 60px; /* Define matched line-height */ 
+  margin: -30px 0 0 0; /* Half caption height */
+  text-align: center; 
+  z-index: 0;
+}
+
+.rift span[class*="span"] {
+  display: block;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translate3d(0,0,0); /* Acceleration FTW */
+  -webkit-transition: -webkit-transform .25s; /* Define anim. speed */
+  -moz-transition: -moz-transform .25s; /* Define anim. speed */
+  transition: transform .25s; /* Define anim. speed */
+}
+
+.rift span.top-span { top: 0; }
+.rift span.btm-span { bottom: 0; }
+
+.rift:hover span.top-span { 
+  -webkit-transform: translate(0,-30px); /* Half caption height */
+  -moz-transform: translate(0,-30px); /* Half caption height */
+  transform: translate(0,-30px); /* Half caption height */
+}
+
+.rift:hover > span.btm-span { 
+  -webkit-transform: translate(0,30px); /* Half caption height */
+  -moz-transform: translate(0,30px); /* Half caption height */
+  transform: translate(0,30px); /* Half caption height */
+}
+
+/**
+ * Recommended defaults
+ */
+
+.rift { 
+  display: inline-block;
+  cursor: pointer;
+  margin: 0 10px 20px 10px; 
+}
+
+/** 
+ * Non-plugin styles 
+ */
+
+* { 
+  margin: 0; 
+  padding: 0; 
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust:     100%;
+}
+
+body {
+  opacity: 0;
+  height: 100%;
+  margin: 0;
+  color: #584968;
+  text-align: center;
+  font: 400 1.3rem/1.5 'Source Sans Pro', Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper { 
+  position: relative;
+  width: 90%;
+  max-width: 850px; 
+  margin: 0 auto; 
+}
+
+/**
+ * Links
+ */
+
+a {
+  color: #584968;
+  text-decoration: none;
+}
+
+a:focus { outline: 0 }
+
+a:hover, a:active { 
+  text-decoration: none; 
+  outline: 0; 
+  color: #BC575D;
+}
+
+/**
+ * Shiny logo is shiny
+ */
+
+.logo {
+  width: 140px;
+  height: 140px;
+  border: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAgMTQwIj48c3R5bGU+LnN0eWxlMHtmaWxsOiM1ODQ5Njg7fTwvc3R5bGU+PHBhdGggZD0iTTEwIDgwLjE1MlY1OS40NjVjMC00LjY0NSAzLjg1My04LjMzOSA4LjU1LTguMzM5aDExLjgyMWM4LjI4NSAwIDE1IDYuNyAxNSAxNSBjMCA1LjE3Mi0yLjQyOCA5LjcxMS02LjQzOCAxMi41MDhjLTAuMjY0IDAuMiAwIDAuNyAwLjMgMC41MjhjMS43NDItMC43OTIgMy4zNzgtMS44OTkgNC43NS0zLjQ4MyBjMi4zNzUgMy40IDIgNy44MTEtMS4wNTYgMTAuODE5Yy0zLjAwOCAzLjAwOC04LjcwNyAzLjU4Ny0xMS41NTgtMC4yNjVsLTQuNTM4LTUuMzgzYy0wLjI2NCA0LjQzMy0zLjg1MyA3Ljg2My04LjQ0NCA3LjkgQzEzLjg1MyA4OC43IDEwIDg0LjggMTAgODAuMTUyeiBNMjYuODM1IDY0LjY4OXYzLjU4OGMwLjI2NCAwLjIgMC41IDAuMiAwLjkgMC4xNThjMS4xMDggMCAxLjktMC44NDQgMS45LTEuOTUyIHMtMC43OTItMi4wNTktMS45LTIuMDU5QzI3LjM2MiA2NC40IDI3LjEgNjQuNSAyNi44IDY0LjY4OXoiIGNsYXNzPSJzdHlsZTAiLz48cGF0aCBkPSJNNDYuOTM4IDgwLjFWNTkuNTE4YzAtNC41OTIgMy42OTQtOC4yODYgOC4zMzgtOC4yODZjNC44MDMgMCA4LjUgMy43IDguNSA4LjI4NlY4MC4xIGMwIDQuNTktMy42OTQgOC40NDMtOC40OTcgOC40NDNDNTAuNjMzIDg4LjUgNDYuOSA4NC43IDQ2LjkgODAuMXoiIGNsYXNzPSJzdHlsZTAiLz48cGF0aCBkPSJNNzMuNjQxIDUxLjA3M0g4Ny41MmM0LjU5MiAwIDguMyAzLjggOC4zIDguMzkyYzAgMy42NDEtMi40ODEgNy4wMTktNi4wMTcgOC4xIGMtMC43MzkgMC4xNTgtMS42ODggMC4yNjQtMi41ODYgMC4yNjRjLTAuNDIzIDAuMTU4LTAuNDIzIDAuNyAwIDAuNjg2YzEuODQ3IDAuMyAzLjYgMC4xIDUuMzgzLTAuNTI3IGMwLjM3IDAuOSAwLjYgMi4xIDAuNiAzLjI3MWMwIDQuNTM5LTMuOCA4LjMzOC04LjM5MiA4LjMzOGgtMi43NDR2MC44OThjMCA0LjUzOC0zLjggOC4zMzgtOC4zMzggOC4zIGMtNC41OTIgMC04LjM5Mi0zLjgtOC4zOTItOC4zMzhjMC02Ljk2NyAwLTE0LjI1IDAtMjEuMDA0QzY1LjQwNyA1NC4xIDY4LjMgNTEuMSA3My42IDUxLjA3M3oiIGNsYXNzPSJzdHlsZTAiLz48cGF0aCBkPSJNMTIxLjUwNCA1MS4xMjZjNC42OTcgMCA4LjUgMy45IDguNSA4LjQ5N2MwIDQuNDg1LTMuNjQyIDguMzM4LTguMzM4IDguMzM4bDAuMDUzIDEyLjMgYzAgNC42OTYtMy44NTMgOC41NDktOC40OTcgOC41NDljLTQuNTM4IDAtOC4zMzgtMy44NTMtOC4zMzgtOC41NDlWNjcuOTYxYy00LjY5NyAwLTguMzM4LTMuODUzLTguMzM4LTguMzM4IGMwLTQuNjQ1IDMuNjQxLTguNDk3IDguMzM4LTguNDk3SDEyMS41MDR6IiBjbGFzcz0ic3R5bGUwIi8+PC9zdmc+) no-repeat center center;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.logo:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/**
+ * Github links
+ */
+
+.github {
+  display: block;
+  width: 160px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  position: fixed;
+  left: -36px;
+  top: 30px;
+  background: #ECEBED;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+
+/**
+ * Footer
+ */
+
+.colophon { 
+  clear: both; 
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: 60px 0 0 0; 
+}
+
+/**
+ * Our lone media query
+ */
+ 
+@media only screen and (max-width: 500px) {
+  .colophon { font-size: 1rem; }
+}
